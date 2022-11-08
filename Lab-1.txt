@@ -1,0 +1,18 @@
+import numpy as np
+import cv2
+img = cv2.imread('/content/1.jpg')
+
+
+from google.colab.patches import cv2_imshow
+cv2_imshow(img)
+
+
+print('height: ', img.shape[0])
+print('width: ', img.shape[1])
+
+
+cv2.imwrite('new.jpeg', img)
+
+
+a = cv2.resize(img, (150, 150))
+cv2_imshow(a)
