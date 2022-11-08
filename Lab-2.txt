@@ -1,0 +1,38 @@
+import cv2
+from matplotlib import pyplot as plt
+
+fig = plt.figure(figsize=(10, 7))
+
+rows = 2
+columns = 2
+
+Image1 = cv2.imread('/content/121.jpg')
+Image2 = cv2.imread('/content/212.jpg')
+Image3 = cv2.imread('/content/321.jpg')
+Image4 = cv2.imread('/content/4321.jpeg')
+
+fig.add_subplot(rows, columns, 1)
+
+plt.imshow(Image1)
+plt.axis('off')
+plt.title("First")
+
+fig.add_subplot(rows, columns, 2)
+
+plt.imshow(Image2)
+plt.axis('off')
+plt.title("Second")
+
+fig.add_subplot(rows, columns, 3)
+
+plt.imshow(Image3)
+plt.axis('off')
+plt.title("Third")
+
+fig.add_subplot(rows, columns, 4)
+
+plt.imshow(Image4)
+plt.axis('off')
+plt.title("Fourth")
+
+
